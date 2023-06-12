@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Word Count</th>
+      <th>Snippet</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let page of pages">
+      <a [href]="hrefFactory(page.pageid)" target="_blank">
+        <td>{{ page.title }}</td>
+      </a>
+      <td>{{ page.wordcount }}</td>
+      <td [innerHTML]="page.snippet"></td>
+    </tr>
+  </tbody>
+</table>
